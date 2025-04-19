@@ -11,8 +11,10 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
-public class V1 extends JFrame {
+public class V1 extends JFrame implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
@@ -71,11 +73,13 @@ public class V1 extends JFrame {
 		}
 		{
 			btnNewButton = new JButton("Registrar Prestamo:");
+			btnNewButton.addActionListener(this);
 			btnNewButton.setBounds(26, 173, 173, 23);
 			contentPane.add(btnNewButton);
 		}
 		{
 			btnRegistrar = new JButton("Registrar Devolución:");
+			btnRegistrar.addActionListener(this);
 			btnRegistrar.setBounds(250, 173, 183, 23);
 			contentPane.add(btnRegistrar);
 		}
@@ -131,6 +135,20 @@ public class V1 extends JFrame {
 			textField_3.setBounds(139, 116, 115, 20);
 			contentPane.add(textField_3);
 		}
+	}
+	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == btnRegistrar) {
+			do_btnRegistrar_actionPerformed(e);
+		}
+		if (e.getSource() == btnNewButton) {
+			do_btnNewButton_actionPerformed(e);
+		}
+	}
+	protected void do_btnNewButton_actionPerformed(ActionEvent e) {
+		//Boton Registrar Prestamo
+	}
+	protected void do_btnRegistrar_actionPerformed(ActionEvent e) {
+		//Boton Registrar Devolución
 	}
 }
 
