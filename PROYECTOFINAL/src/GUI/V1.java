@@ -32,6 +32,7 @@ public class V1 extends JFrame implements ActionListener {
 	private JLabel lblFechaDeDevolucin;
 	private JTextField textField_3;
 	private JTextArea textArea;
+	private JButton btnNewButton_1;
 
 	/**
 	 * Launch the application.
@@ -135,8 +136,17 @@ public class V1 extends JFrame implements ActionListener {
 			textField_3.setBounds(139, 116, 115, 20);
 			contentPane.add(textField_3);
 		}
+		{
+			btnNewButton_1 = new JButton("REGISTRAR LIBRO:");
+			btnNewButton_1.addActionListener(this);
+			btnNewButton_1.setBounds(269, 90, 170, 23);
+			contentPane.add(btnNewButton_1);
+		}
 	}
 	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == btnNewButton_1) {
+			do_btnNewButton_1_actionPerformed(e);
+		}
 		if (e.getSource() == btnRegistrar) {
 			do_btnRegistrar_actionPerformed(e);
 		}
@@ -149,6 +159,9 @@ public class V1 extends JFrame implements ActionListener {
 	}
 	protected void do_btnRegistrar_actionPerformed(ActionEvent e) {
 		//Boton Registrar Devolución
+	}
+	protected void do_btnNewButton_1_actionPerformed(ActionEvent e) {
+		//Boton REGISTRAR LIBRO - Roberto Torres Casapia
 	}
 }
 
