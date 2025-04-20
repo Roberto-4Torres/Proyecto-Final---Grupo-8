@@ -34,6 +34,7 @@ public class V1 extends JFrame implements ActionListener {
 	private JTextArea textArea;
 	private JButton btnNewButton_1;
 	private JButton btnNewButton_2;
+	private JButton btnNewButton_3;
 
 	/**
 	 * Launch the application.
@@ -149,8 +150,17 @@ public class V1 extends JFrame implements ActionListener {
 			btnNewButton_2.setBounds(165, 209, 89, 23);
 			contentPane.add(btnNewButton_2);
 		}
+		{
+			btnNewButton_3 = new JButton("Revisar Disponibilidad");
+			btnNewButton_3.addActionListener(this);
+			btnNewButton_3.setBounds(26, 144, 173, 23);
+			contentPane.add(btnNewButton_3);
+		}
 	}
 	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == btnNewButton_3) {
+			do_btnNewButton_3_actionPerformed(e);
+		}
 		if (e.getSource() == btnNewButton_2) {
 			do_btnNewButton_2_actionPerformed(e);
 		}
@@ -175,6 +185,9 @@ public class V1 extends JFrame implements ActionListener {
 	}
 	protected void do_btnNewButton_2_actionPerformed(ActionEvent e) {
 		//Boton ELIMINAR LIBRO - Raul Yarupaayta Arotaype
+	}
+	protected void do_btnNewButton_3_actionPerformed(ActionEvent e) {
+		//Botón Revisar Disponibilidad - Edgar Vasquez Bedoya
 	}
 }
 
