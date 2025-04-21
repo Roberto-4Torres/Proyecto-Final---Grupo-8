@@ -19,19 +19,19 @@ public class V1 extends JFrame implements ActionListener {
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JLabel lblNewLabel;
-	private JTextField textField;
+	private JTextField txtUsuario;
 	private JButton btnNewButton;
 	private JButton btnRegistrar;
 	private JLabel lblUsuario;
-	private JTextField textField_1;
+	private JTextField txtLibro;
 	private JScrollPane scrollPane;
 	private JLabel lblListasPrestamos;
 	private JLabel lblUsuario_2;
 	private JLabel lblFechaDePrestamo;
-	private JTextField textField_2;
+	private JTextField txtFechaPrestamo;
 	private JLabel lblFechaDeDevolucin;
-	private JTextField textField_3;
-	private JTextArea textArea;
+	private JTextField txtFechaDevolución;
+	private JTextArea txtS;
 	private JButton btnNewButton_1;
 	private JButton btnNewButton_2;
 	private JButton btnNewButton_3;
@@ -69,10 +69,10 @@ public class V1 extends JFrame implements ActionListener {
 			contentPane.add(lblNewLabel);
 		}
 		{
-			textField = new JTextField();
-			textField.setBounds(324, 48, 115, 20);
-			contentPane.add(textField);
-			textField.setColumns(10);
+			txtUsuario = new JTextField();
+			txtUsuario.setBounds(324, 48, 115, 20);
+			contentPane.add(txtUsuario);
+			txtUsuario.setColumns(10);
 		}
 		{
 			btnNewButton = new JButton("Registrar Prestamo:");
@@ -92,18 +92,18 @@ public class V1 extends JFrame implements ActionListener {
 			contentPane.add(lblUsuario);
 		}
 		{
-			textField_1 = new JTextField();
-			textField_1.setColumns(10);
-			textField_1.setBounds(59, 48, 115, 20);
-			contentPane.add(textField_1);
+			txtLibro = new JTextField();
+			txtLibro.setColumns(10);
+			txtLibro.setBounds(59, 48, 115, 20);
+			contentPane.add(txtLibro);
 		}
 		{
 			scrollPane = new JScrollPane();
 			scrollPane.setBounds(10, 243, 437, 152);
 			contentPane.add(scrollPane);
 			{
-				textArea = new JTextArea();
-				scrollPane.setViewportView(textArea);
+				txtS = new JTextArea();
+				scrollPane.setViewportView(txtS);
 			}
 		}
 		{
@@ -122,10 +122,10 @@ public class V1 extends JFrame implements ActionListener {
 			contentPane.add(lblFechaDePrestamo);
 		}
 		{
-			textField_2 = new JTextField();
-			textField_2.setColumns(10);
-			textField_2.setBounds(139, 91, 115, 20);
-			contentPane.add(textField_2);
+			txtFechaPrestamo = new JTextField();
+			txtFechaPrestamo.setColumns(10);
+			txtFechaPrestamo.setBounds(139, 91, 115, 20);
+			contentPane.add(txtFechaPrestamo);
 		}
 		{
 			lblFechaDeDevolucin = new JLabel("Fecha de Devolución:");
@@ -133,10 +133,10 @@ public class V1 extends JFrame implements ActionListener {
 			contentPane.add(lblFechaDeDevolucin);
 		}
 		{
-			textField_3 = new JTextField();
-			textField_3.setColumns(10);
-			textField_3.setBounds(139, 116, 115, 20);
-			contentPane.add(textField_3);
+			txtFechaDevolución = new JTextField();
+			txtFechaDevolución.setColumns(10);
+			txtFechaDevolución.setBounds(139, 116, 115, 20);
+			contentPane.add(txtFechaDevolución);
 		}
 		{
 			btnNewButton_1 = new JButton("REGISTRAR LIBRO:");
@@ -185,6 +185,14 @@ public class V1 extends JFrame implements ActionListener {
 	}
 	protected void do_btnNewButton_2_actionPerformed(ActionEvent e) {
 		//Boton ELIMINAR LIBRO - Raul Yarupaayta Arotaype
+		//Programar el boton ELIMINAR - Pedro Zapata Paz
+		txtS.setText("");
+		txtUsuario.setText("");
+	    txtLibro.setText("");
+	    txtFechaPrestamo.setText("");
+	    txtFechaDevolución.setText("");
+	    txtLibro.grabFocus();
+		
 	}
 	protected void do_btnNewButton_3_actionPerformed(ActionEvent e) {
 		//Botón Revisar Disponibilidad - Edgar Vasquez Bedoya
