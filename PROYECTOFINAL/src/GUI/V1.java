@@ -6,6 +6,10 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import arreglo.ArregloLibro;
+import clase.Libro;
+
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
@@ -180,9 +184,28 @@ public class V1 extends JFrame implements ActionListener {
 	protected void do_btnRegistrar_actionPerformed(ActionEvent e) {
 		//Boton Registrar Devolución
 	}
+	ArregloLibro al=new ArregloLibro();
 	protected void do_btnNewButton_1_actionPerformed(ActionEvent e) {
 		//Boton REGISTRAR LIBRO - Roberto Torres Casapia
+		String libro=txtLibro.getText();
+		String user=txtUsuario.getText();
+		String fp=txtFechaPrestamo.getText();
+		String fd=txtFechaDevolución.getText();
+		Libro li=new Libro(user, libro, fp, fd);
+		al.Adicionar(li);
+		Listado();
 	}
+	void Imprimir(String s) 
+	{
+		txtS.append(s+"\n");
+	}
+	void Listado() {
+		Imprimir("Libro\tUsuario\tFecha préstamo\tFecha Devolución");
+		for (int i =0;i<al.Tamaño();i++) {
+			Imprimir(""+al.Obtener(i).getLibro()+"\t"+al.Obtener(i).getUser()+"\t"+al.Obtener(i).getFp()+"\t"+al.Obtener(i).getFd());
+			}
+		}
+	
 	protected void do_btnNewButton_2_actionPerformed(ActionEvent e) {
 		//Boton ELIMINAR LIBRO - Raul Yarupaayta Arotaype
 		//Programar el boton ELIMINAR - Pedro Zapata Paz
